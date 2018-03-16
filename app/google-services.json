@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "240747386346",
+    "firebase_url": "https://nearme-truclc.firebaseio.com",
+    "project_id": "nearme-truclc",
+    "storage_bucket": "nearme-truclc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240747386346:android:27e4b5c40f738b62",
+        "android_client_info": {
+          "package_name": "com.example.nearme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240747386346-ch0khm04ijenq44sho50v0ha59ncldo1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCDE7OvLzyuaLZqXGniIrb5CRwgvbdJtY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

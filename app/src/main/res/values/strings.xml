@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NearMe</string>
+    <string name="app_name">Near Me</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
@@ -15,4 +15,7 @@
         completions."
     </string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="facebook_app_id">179267499441879</string>
+    <string name="fb_login_protocol_scheme">fb179267499441879</string>
 </resources>

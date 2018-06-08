@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Viết bình luận"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            />
+
+     5   <TextView
+            android:id="@+id/txt_Comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:text="Bình Luận"
+            android:textSize="20dp"
+            android:background="@drawable/background_cycle"
+            android:textColor="@color/colorAccent"
+            android:padding="5dp"
+            />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:id="@+id/txt_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gogi house"
+            android:textColor="#ffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/txt_Address"
+            android:textSize="20sp"
+            android:textColor="#ffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="323 Tran Hung dao"
+            />
+     <RatingBar
+         android:layout_width="wrap_content"
+         android:id="@+id/ratingbar_Comment"
+         android:padding="5dp"
+         android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edt_Title"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tiêu đề ( không bắt buộc )"
+        android:textSize="20sp"
+        android:background="#FFF"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <EditText
+        android:id="@+id/edt_Content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Viết trên 100 từ, đúng chính tả, ngôn từ văn hóa, không spam ... để được điểm thưởng"
+        android:textSize="20sp"
+        android:gravity="top"
+        android:layout_weight="1"
+        />
+
+
+</LinearLayout>

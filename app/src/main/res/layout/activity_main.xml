@@ -1,17 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.nearme.View.MainActivity">
-    
-    <TextView
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+  <android.support.v7.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimaryDark"
+      >
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/near_me" />
+
+    <RadioGroup
+        android:id="@+id/group_choose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ACB"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/tvMain"/>
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_radiobuttongroup_main"
+        >
 
-</RelativeLayout>
+      <RadioButton
+          android:id="@+id/rd_Nearme"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/custom_radio_nearme"
+          android:button="@android:color/transparent"
+          android:checked="true"
+          android:padding="10dp"
+          android:text="Gần tôi" />
+
+      <RadioButton
+          android:id="@+id/rd_Map"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Khám phá"
+          android:button="@android:color/transparent"
+          android:background="@drawable/custom_radio_hot"
+          android:padding="10dp"
+          />
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/img_Add_Setting"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/ic_add_white_24dp" />
+
+  </android.support.v7.widget.Toolbar>
+
+  <android.support.v4.view.ViewPager
+      android:id="@+id/viewpager_place"
+      android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+  </android.support.v4.view.ViewPager>
+</LinearLayout>

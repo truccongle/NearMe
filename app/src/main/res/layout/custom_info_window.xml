@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/txt_Total_Point"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/background_cycle"
+                android:gravity="center"
+                android:text="Nearme"
+                android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_Name"
+            android:layout_marginTop="7dp"
+            android:maxLength="30"
+            android:textStyle="italic|bold"
+            android:layout_height="wrap_content"
+            android:text="Name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tv_Name"
+            android:maxLength="30"
+            android:id="@+id/tv_Address"
+            android:layout_height="wrap_content"
+            android:text="Ađrêss"/>
+
+
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    >
+    <LinearLayout
+            android:id="@+id/container_Comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cicle_ImageUser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:src="@drawable/background"
+                android:text="6.8"
+                android:textColor="@color/colorAccent" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/txt_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gogi House"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            <TextView
+                    android:id="@+id/txt_Content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="36 Triệu Quang Phục Quận 3" />
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/txt_Point"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="6.6" />
+
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="1dp"/>
+
+
+
+</LinearLayout>

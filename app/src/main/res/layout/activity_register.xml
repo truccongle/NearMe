@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#bbefec"
         >
 
         <LinearLayout
@@ -31,63 +30,63 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                app:srcCompat="@drawable/com_facebook_button_icon_white" />
+                app:srcCompat="@drawable/near_me" />
 
             <EditText
-                android:id="@+id/edEmailDK"
+                android:id="@+id/edt_Email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/colorAccent"
-                android:drawableLeft="@drawable/common_google_signin_btn_icon_dark"
+                android:drawableLeft="@drawable/ic_perm_identity_white_24dp"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:hint="Email"
+                android:hint="Nhập vào Email"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/colorAccent"
                 android:textColorHint="@color/colorAccent" />
 
             <EditText
-                android:id="@+id/edPasswordDK"
+                android:id="@+id/edt_Pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/colorAccent"
-                android:drawableLeft="@drawable/common_google_signin_btn_icon_dark"
+                android:drawableLeft="@drawable/ic_lock_outline_white_24dp"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:hint="Pass"
+                android:hint="Mât khẩu"
                 android:inputType="textPassword"
                 android:textColor="@color/colorAccent"
                 android:textColorHint="@color/colorAccent" />
 
             <EditText
-                android:id="@+id/edNhapLaiPasswordDK"
+                android:id="@+id/edt_Re_Passs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/colorAccent"
-                android:drawableLeft="@drawable/common_google_signin_btn_icon_dark"
+                android:drawableLeft="@drawable/ic_lock_outline_white_24dp"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:hint="Repass"
+                android:hint="Nhập lại mật khẩu"
                 android:inputType="textPassword"
                 android:textColor="@color/colorAccent"
                 android:textColorHint="@color/colorAccent" />
 
             <Button
-                android:id="@+id/btnDangKy"
+                android:id="@+id/btn_Register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:background="@mipmap/ic_launcher"
+                android:background="@drawable/background_cycle"
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/colorPrimaryDark"
                 android:fontFamily="sans-serif"
                 android:paddingLeft="60dp"
                 android:paddingRight="60dp"
-                android:text="Reg"
+                android:text="Đăng ký"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAccent" />
 

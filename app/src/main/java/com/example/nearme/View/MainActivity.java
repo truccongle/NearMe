@@ -1,60 +1,93 @@
 package com.example.nearme.View;
 
+import android.content.Intent;
+import android.support.annotation.IdRes;
+import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
+import com.example.nearme.Adapter.AdapterViewPaperMain;
+import com.example.nearme.Model.UserModel;
 import com.example.nearme.R;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
-public class MainActivity extends AppCompatActivity {
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    FirebaseStorage storage = FirebaseStorage.getInstance();
-    StorageReference storageRef = storage.getReference();
+public class  MainActivity extends  AppCompatActivity implements ViewPager.OnPageChangeListener, RadioGroup.OnCheckedChangeListener {
 
-    DatabaseReference myPlace =database.getReference().child("places");
+    ViewPager viewPagerMain;
+    ImageView imgAddSetting;
+    RadioButton rdNearme,rdMap;
+    RadioGroup groupChoose;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LoadData();
-    }
+        viewPagerMain =  findViewById(R.id.viewpager_place);
+        rdNearme = findViewById(R.id.rd_Nearme);
+        rdMap =  findViewById(R.id.rd_Map);
+        imgAddSetting=findViewById(R.id.img_Add_Setting);
+        groupChoose =  findViewById(R.id.group_choose);
 
-    private void LoadData() {
-        myPlace.addChildEventListener(new ChildEventListener() {
+
+        AdapterViewPaperMain adapterViewPaperMain = new AdapterViewPaperMain(getSupportFragmentManager());
+        viewPagerMain.setAdapter(adapterViewPaperMain);
+
+        viewPagerMain.addOnPageChangeListener(this);
+        groupChoose.setOnCheckedChangeListener(this);
+        imgAddSetting.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                String value=dataSnapshot.child("photos").getValue().toString();
-                String name= dataSnapshot.child("name").getValue().toString();
-                Log.d("ad",value);
-                Log.d("adc",name);
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
+            public void onClick(View v) {
+                Intent intent= new Intent(getApplicationContext(),AddPlaceActivity.class);
+                startActivity(intent );
             }
         });
+
+    }
+
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        switch (position){
+            case 0:
+                rdNearme.setChecked(true);
+                break;
+
+            case 1:
+                rdMap.setChecked(true);
+                break;
+
+        }
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+        switch (checkedId){
+            case R.id.rd_Nearme:
+                viewPagerMain.setCurrentItem(0);
+                break;
+
+            case R.id.rd_Map:
+                viewPagerMain.setCurrentItem(1);
+                break;
+        }
     }
 }

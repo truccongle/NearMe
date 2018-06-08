@@ -3,51 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
     android:layout_height="match_parent"
-    android:background="#70dfcf"
     android:backgroundTint="@color/colorPrimaryDark"
-    tools:context="com.example.nearme.View.SplashActivity">
+    tools:context=".View.SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
         android:layout_width="200dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:ignore="VectorDrawableCompat" />
-
-    <TextView
-        android:id="@+id/txt_version"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:text="0.1"
-        android:textColor="@android:color/background_light" />
-
-    <TextView
-        android:id="@+id/txt_author"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="TrucLC"
-        android:textColor="@android:color/background_light" />
-
+        app:srcCompat="@drawable/near_me_1024x444" />
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal">
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyle"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:indeterminateTint="@android:color/background_light" />
 
@@ -55,9 +34,10 @@
             android:id="@+id/txt_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="30sp"
             android:layout_weight="1"
             android:text="Loading..."
             android:textColor="@android:color/background_light"
-            tools:text="Loading..." />
+             />
     </LinearLayout>
 </RelativeLayout>

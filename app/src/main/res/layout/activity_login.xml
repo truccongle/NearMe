@@ -4,17 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6e4e4e"
-    android:orientation="vertical">
-
+    android:background="@color/colorPrimaryDark"
+    android:backgroundTint="@color/colorPrimaryDark"
+    tools:context=".View.LoginActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="#ffff"
-        android:backgroundTint="@color/colorPrimaryDark"
         android:orientation="vertical"
         android:paddingBottom="20dp"
         android:paddingLeft="50dp"
@@ -26,48 +24,49 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            app:srcCompat="@mipmap/ic_launcher" />
+            app:srcCompat="@drawable/near_me" />
 
         <EditText
-            android:id="@+id/edt_email"
+            android:id="@+id/edt_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/colorAccent"
-            android:drawableLeft="@drawable/common_google_signin_btn_icon_dark"
+            android:drawableLeft="@drawable/ic_perm_identity_white_24dp"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Email"
+            android:hint="Email đăng nhập"
             android:inputType="textPersonName"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorAccent" />
 
         <EditText
-            android:id="@+id/edt_pass"
+            android:id="@+id/edt_Pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/colorAccent"
-            android:drawableLeft="@drawable/common_google_signin_btn_icon_dark"
+            android:drawableLeft="@drawable/ic_lock_outline_white_24dp"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Pass"
+            android:hint="Mật khẩu"
             android:inputType="textPassword"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorAccent" />
+
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/common_google_signin_btn_icon_dark"
+            android:background="@drawable/background_cycle"
             android:drawablePadding="10dp"
             android:drawableTint="@color/colorPrimaryDark"
             android:fontFamily="sans-serif"
             android:paddingLeft="60dp"
             android:paddingRight="60dp"
-            android:text="Login"
+            android:text="Đăng nhập"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent" />
 
@@ -89,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="Or"
+                android:text="hoặc"
                 android:textColor="@color/colorAccent" />
 
             <View
@@ -101,21 +100,35 @@
 
         </LinearLayout>
 
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/btn_login_fb"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btn_Facebook"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#3762ae"
+            android:drawableLeft="@drawable/icon_facebook"
+            android:paddingLeft="10dp"
+            android:text="Login with Facebook"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
 
-        <com.google.android.gms.common.SignInButton
-            android:id="@+id/btn_login_google"
+        <Button
+            android:id="@+id/btn_Google"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"
-            />
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#f46464"
+            android:drawableLeft="@drawable/icon_google"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Login with Google"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -126,19 +139,19 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/txt_forgot_pass"
+                android:id="@+id/txt_Forgot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Forgot pass"
+                android:text="Quên mật khẩu ?"
                 android:textColor="@color/colorAccent" />
 
             <TextView
-                android:id="@+id/txt_register"
+                android:id="@+id/txt_Register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Register"
+                android:text="Đăng ký"
                 android:textAlignment="textEnd"
                 android:textColor="@color/colorAccent" />
         </LinearLayout>
